@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@layer base {
+    body {
+        font-family: 'Inter Tight', sans-serif;
+    }
+}
+
+@layer utilities {
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .swiper-slide-thumb-active img {
+        @apply border-2 border-[#1B74E4];
+    }
+
+    @keyframes fadeZoomIn {
+        0% {
+            opacity: 0;
+            transform: scale(0.95) translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+    }
+
+    @media (min-width: 768px) {
+        .filtered-height-md {
+            height: calc(100vh - 56px) !important;
+        }
+    }
+}
