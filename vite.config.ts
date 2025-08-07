@@ -9,7 +9,8 @@ export default defineConfig({
         tailwindcss()
     ],
     preview: {
-        port: process.env.PORT ? Number(process.env.PORT) : 4173, // 👈 Support Render's dynamic port
-        host: true // 👈 Allow external access (important for Render)
+        port: process.env.PORT ? Number(process.env.PORT) : 4173,
+        host: true,
+        allowedHosts: ['ul-new-app-main.onrender.com']  
     }
 })
